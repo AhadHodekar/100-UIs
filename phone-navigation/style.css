@@ -36,10 +36,12 @@ main {
    margin-bottom: 30px;
    border-radius: 0.8rem 0.8rem 0 0;
    padding: 10px;
+   transition: 0.1s ease-in-out;
 }
 .user-profile:hover {
    cursor: pointer;
    background-color: #f2f2f2;
+   transition: 0.1s ease-in-out;
 }
 .user-profile .user-image {
    width: 70px;
@@ -79,10 +81,12 @@ main {
    width: 100%;
    border-radius: 0.5rem;
    padding: 8px;
+   transition: 0.1s ease-in-out;
 }
 .action:hover {
    background-color: #f1f1f1;
    cursor: pointer;
+   transition: 0.1s ease-in-out;
 }
 .action .icon {
    width: 40px;
@@ -119,9 +123,11 @@ nav .active {
    justify-content: center;
    border-radius: 1rem;
    color: #c1c1dc;
+   transition: 0.1s ease-in-out;
 }
 .nav-button:hover {
    background-color: #f1f1f1;
    cursor: pointer;
    color: #a4a4f3;
+   transition: 0.1s ease-in-out;
 }
