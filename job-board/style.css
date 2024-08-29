@@ -2,9 +2,13 @@
 
 :root {
    --bg-primary: #efefef;
+   --bg-primary-heavy: #e2dede;
    --bg-base: #ffffff;
    --primary: #0095ff;
+   --secondary: #888888;
    --base: #ffff;
+   --r-default: 2rem;
+   --shadow: 0px 1px 20px #aaa;
 }
 * {
    margin: 0;
@@ -12,16 +16,22 @@
    box-sizing: border-box;
    font-family: "Roboto";
 }
-
+hr {
+   border-color: #fafafa;
+   color: #ffffff;
+   background-color: #ffffff;
+}
 body {
    width: 100%;
    height: 100vh;
    background-color: lightgray;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   overflow-y: scroll;
 }
-
+main {
+   display: flex;
+   gap: 10px;
+   padding: 10px;
+}
 header {
    background-color: #efefef;
    display: flex;
@@ -33,6 +43,7 @@ header {
    padding: 20px;
    border-radius: 2rem;
    font-size: 1.1rem;
+   box-shadow: var(--shadow);
 }
 .searchbar {
    flex-grow: 3;
@@ -75,12 +86,15 @@ header {
    justify-content: center;
    gap: 10px;
 }
+.searchbar .dropdown:hover {
+   cursor: pointer;
+   color: #535353;
+}
 .location {
    color: #b4b4b4;
 }
 
 .button {
-   flex-grow: 1;
    height: 50px;
    outline: none;
    border: none;
@@ -90,4 +104,80 @@ header {
    font-size: 1.1rem;
    background-color: var(--primary);
    color: var(--base);
+}
+.button:hover {
+   cursor: pointer;
+   background-color: #007cd4;
+}
+.button:active {
+   background-color: #005999;
+}
+.searchbar .button {
+   flex-grow: 1;
+}
+
+.job-details {
+   width: 380px;
+   background-color: var(--bg-base);
+   height: 800px;
+   border-radius: var(--r-default);
+   padding: 25px 20px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: var(--shadow);
+}
+.company {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding: 20px 0px;
+}
+.company-jobtitle {
+   padding-top: 0 !important;
+}
+.company-jobtitle .job-applicants {
+   color: var(--primary);
+   background-color: #d5eeff;
+   border-radius: var(--r-default);
+   width: fit-content;
+   padding: 6px;
+}
+.company-logo {
+   width: 50px;
+   height: 50px;
+   padding: 5px;
+   border-radius: 0.5rem;
+   background-color: var(--bg-primary-heavy);
+}
+.company-logo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.company-info span {
+   text-decoration: underline;
+   color: var(--primary);
+}
+.company-info span:hover {
+   cursor: pointer;
+}
+.skills li {
+   background-color: var(--bg-primary-heavy);
+   padding: 5px;
+   border-radius: 0.5rem;
+}
+.skills:hover {
+   cursor: pointer;
+}
+.skills ul {
+   list-style: none;
+   display: flex;
+   gap: 5px;
+}
+.company-basesalary {
+   flex-grow: 3;
+}
+.light {
+   color: var(--secondary);
 }
