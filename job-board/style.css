@@ -26,11 +26,19 @@ body {
    height: 100vh;
    background-color: lightgray;
    overflow-y: scroll;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 main {
    display: flex;
-   gap: 10px;
+   gap: 20px;
    padding: 10px;
+}
+.search-results {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
 }
 header {
    background-color: #efefef;
@@ -116,10 +124,12 @@ header {
    flex-grow: 1;
 }
 
+/*---------------------------Job Details---------------------------*/
+
 .job-details {
    width: 380px;
    background-color: var(--bg-base);
-   height: 800px;
+   height: 720px;
    border-radius: var(--r-default);
    padding: 25px 20px;
    display: flex;
@@ -161,6 +171,7 @@ header {
 }
 .company-info span:hover {
    cursor: pointer;
+   color: #005999;
 }
 .skills li {
    background-color: var(--bg-primary-heavy);
@@ -180,4 +191,57 @@ header {
 }
 .light {
    color: var(--secondary);
+}
+
+/*---------------------------Jobs---------------------------*/
+.results {
+   padding: 20px;
+   background-color: var(--bg-primary);
+   width: 700px;
+   border-radius: var(--r-default);
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.results .header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.jobs {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+.job {
+   background-color: var(--bg-base);
+   border-radius: 0.8rem;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 10px;
+}
+.job .top {
+   display: flex;
+   gap: 5px;
+}
+.job .top .job-title {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.job .bottom {
+   display: flex;
+   justify-content: space-between;
+}
+.job .bottom p {
+   color: #959595;
+}
+.job .bottom .salary {
+   color: inherit;
+   display: flex;
+   gap: 5px;
+}
+.job .bottom span {
+   color: var(--primary);
 }
