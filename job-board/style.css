@@ -1,14 +1,247 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root {
+   --bg-primary: #efefef;
+   --bg-primary-heavy: #e2dede;
+   --bg-base: #ffffff;
+   --primary: #0095ff;
+   --secondary: #888888;
+   --base: #ffff;
+   --r-default: 2rem;
+   --shadow: 0px 1px 20px #aaa;
+}
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
    font-family: "Roboto";
 }
-
+hr {
+   border-color: #fafafa;
+   color: #ffffff;
+   background-color: #ffffff;
+}
 body {
    width: 100%;
    height: 100vh;
-   background-color: #f2f1f1;
+   background-color: lightgray;
+   overflow-y: scroll;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+main {
+   display: flex;
+   gap: 20px;
+   padding: 10px;
+}
+.search-results {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+header {
+   background-color: #efefef;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+   width: 700px;
+   height: 90px;
+   padding: 20px;
+   border-radius: 2rem;
+   font-size: 1.1rem;
+   box-shadow: var(--shadow);
+}
+.searchbar {
+   flex-grow: 3;
+   border-radius: 1rem;
+   display: flex;
+   gap: 3px;
+   height: 50px;
+   overflow: hidden;
+   color: #959595;
+}
+.searchbar .left {
+   flex-grow: 3;
+   height: 100%;
+   background: #ffffff;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   padding: 0 0 0 10px;
+}
+.searchbar .right {
+   flex-grow: 2;
+   height: 100%;
+   background: #ffffff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1px;
+   padding: 0 0 0 10px;
+}
+.searchbar input {
+   border: none;
+   outline: none;
+   font-size: 1.1rem;
+   color: #535252;
+   height: 100%;
+}
+.searchbar .dropdown {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+.searchbar .dropdown:hover {
+   cursor: pointer;
+   color: #535353;
+}
+.location {
+   color: #b4b4b4;
+}
+
+.button {
+   height: 50px;
+   outline: none;
+   border: none;
+   padding: 0px 20px;
+   border-radius: 1rem;
+   font-weight: bolder;
+   font-size: 1.1rem;
+   background-color: var(--primary);
+   color: var(--base);
+}
+.button:hover {
+   cursor: pointer;
+   background-color: #007cd4;
+}
+.button:active {
+   background-color: #005999;
+}
+.searchbar .button {
+   flex-grow: 1;
+}
+
+/*---------------------------Job Details---------------------------*/
+
+.job-details {
+   width: 380px;
+   background-color: var(--bg-base);
+   height: 720px;
+   border-radius: var(--r-default);
+   padding: 25px 20px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: var(--shadow);
+}
+.company {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding: 20px 0px;
+}
+.company-jobtitle {
+   padding-top: 0 !important;
+}
+.company-jobtitle .job-applicants {
+   color: var(--primary);
+   background-color: #d5eeff;
+   border-radius: var(--r-default);
+   width: fit-content;
+   padding: 6px;
+}
+.company-logo {
+   width: 50px;
+   height: 50px;
+   padding: 5px;
+   border-radius: 0.5rem;
+   background-color: var(--bg-primary-heavy);
+}
+.company-logo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.company-info span {
+   text-decoration: underline;
+   color: var(--primary);
+}
+.company-info span:hover {
+   cursor: pointer;
+   color: #005999;
+}
+.skills li {
+   background-color: var(--bg-primary-heavy);
+   padding: 5px;
+   border-radius: 0.5rem;
+}
+.skills:hover {
+   cursor: pointer;
+}
+.skills ul {
+   list-style: none;
+   display: flex;
+   gap: 5px;
+}
+.company-basesalary {
+   flex-grow: 3;
+}
+.light {
+   color: var(--secondary);
+}
+
+/*---------------------------Jobs---------------------------*/
+.results {
+   padding: 20px;
+   background-color: var(--bg-primary);
+   width: 700px;
+   border-radius: var(--r-default);
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.results .header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.jobs {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+}
+.job {
+   background-color: var(--bg-base);
+   border-radius: 0.8rem;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 10px;
+}
+.job .top {
+   display: flex;
+   gap: 5px;
+}
+.job .top .job-title {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.job .bottom {
+   display: flex;
+   justify-content: space-between;
+}
+.job .bottom p {
+   color: #959595;
+}
+.job .bottom .salary {
+   color: inherit;
+   display: flex;
+   gap: 5px;
+}
+.job .bottom span {
+   color: var(--primary);
 }
