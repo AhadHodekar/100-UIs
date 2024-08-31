@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Roboto";
+}
+
+body {
+   width: 100%;
+   height: 100vh;
+   background-color: #f2f1f1;
+}
+main {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.profile-menu {
+   top: 30%;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   background: #ffffff;
+   width: 400px;
+   max-height: 80px;
+   border-radius: 0.5rem;
+   overflow: hidden;
+   padding: 10px;
+   box-shadow: 0px 15px 50px rgb(176, 176, 176);
+   gap: 10px;
+   overflow: hidden;
+   transition: max-height 0.5s ease-in-out;
+}
+.profile-menu.open-menu {
+   max-height: 100%;
+   transition: max-height 0.5s ease-in-out;
+}
+
+.profile {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   width: 100%;
+   height: 80px;
+   padding: 0px 0px 0px 10px;
+}
+.profile .user {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   flex-grow: 2;
+}
+.user-details {
+   display: flex;
+   gap: 10px;
+}
+.user-email p {
+   display: none;
+}
+.profile-menu.open-menu .user-email p {
+   display: block;
+}
+.image {
+   width: 60px;
+   height: 60px;
+   border-radius: 100%;
+   overflow: hidden;
+}
+img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.level {
+   display: flex;
+   align-items: center;
+   flex-grow: 2;
+}
+.level .level-bullet {
+   background: #df76ff;
+   border: 2px solid purple;
+   border-radius: 0.5rem;
+   padding: 2px;
+   font-size: 0.8rem;
+}
+.profile .menu-button {
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 100%;
+   font-size: 1.3rem;
+}
+.profile .menu-button:hover {
+   cursor: pointer;
+   background: #f2f1f1;
+   transition: 0.3s;
+}
+
+.controls {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   background-color: #ffffff;
+}
+.control {
+   width: 100%;
+   height: 60px;
+   display: flex;
+   align-items: center;
+   padding: 10px;
+   gap: 10px;
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+
+.control .icon {
+   padding: 10px;
+}
+.control:hover {
+   background-color: #f2f1f1;
+   border-radius: 1.2rem;
+   cursor: pointer;
+}
+
+hr {
+   width: 100%;
+   color: lightgray;
+   outline: none;
+   border: 0.5px solid lightgray;
+}

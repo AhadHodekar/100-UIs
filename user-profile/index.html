@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="style.css" />
+      <title>User Profile</title>
+   </head>
+   <body>
+      <main>
+         <div class="profile-menu" id="profileMenu">
+            <div class="profile">
+               <div class="image">
+                  <img src="assets/mrbruh.png" alt="" />
+               </div>
+               <div class="user">
+                  <div class="user-details">
+                     <h2>Mr Bruh</h2>
+                     <div class="level">
+                        <div class="level-bullet">PRO</div>
+                     </div>
+                  </div>
+                  <div class="user-email">
+                     <p>mrbruh@gmail.com</p>
+                  </div>
+               </div>
+               <div class="menu-button" onclick="toggleMenu()">
+                  <i class="fa-solid fa-ellipsis"></i>
+               </div>
+            </div>
+            <hr />
+            <div class="controls">
+               <div class="control profile-settings">
+                  <div class="icon">
+                     <i class="fa-solid fa-sliders"></i>
+                  </div>
+                  <p>Profile Settings</p>
+               </div>
+               <div class="control profile-settings">
+                  <div class="icon">
+                     <i class="fa-regular fa-circle-question"></i>
+                  </div>
+                  <p>Help Center</p>
+               </div>
+               <div class="control profile-settings">
+                  <div class="icon">
+                     <i class="fa-regular fa-credit-card"></i>
+                  </div>
+                  <p>Billings</p>
+               </div>
+               <div class="control profile-settings">
+                  <div class="icon">
+                     <i class="fa-regular fa-circle-up"></i>
+                  </div>
+                  <p>Upgrade Plan</p>
+               </div>
+            </div>
+            <hr />
+            <div class="control sign-out">
+               <div class="icon">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+               </div>
+               <p>Sign Out</p>
+            </div>
+         </div>
+      </main>
+
+      <script>
+         let profileMenu = document.getElementById("profileMenu");
+         function toggleMenu() {
+            profileMenu.classList.toggle("open-menu");
+         }
+      </script>
+   </body>
+</html>
