@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="style.css" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link
+         rel="shortcut icon"
+         href="assets/Ubundows.png"
+         type="image/x-icon"
+      />
+      <title>App Navigation</title>
+   </head>
+   <body>
+      <main>
+         <div class="sidebar" id="sidebar">
+            <div class="sidebar-button" onclick="toggleSidebar()">
+               <div class="icon">
+                  <i class="fa-solid fa-bars"></i>
+               </div>
+            </div>
+            <header>
+               <div class="logo">
+                  <img src="assets/Ubundows.png" alt="" />
+               </div>
+               <p>Winux</p>
+            </header>
+            <div class="tabs">
+               <div class="tab active">
+                  <div class="icon">
+                     <i
+                        class="fa-solid fa-chart-simple"
+                        style="color: #ffffff"
+                     ></i>
+                  </div>
+                  <p>Dashboard</p>
+               </div>
+               <div class="tab">
+                  <div class="icon">
+                     <i class="fa-solid fa-tag fa-rotate-90"></i>
+                  </div>
+                  <p>Tag List</p>
+               </div>
+               <div class="tab">
+                  <div class="icon">
+                     <i
+                        class="fa-solid fa-newspaper"
+                        style="color: #ffffff"
+                     ></i>
+                  </div>
+                  <p>Define Subject</p>
+               </div>
+               <div class="tab">
+                  <div class="icon">
+                     <i class="fa-solid fa-users" style="color: #ffffff"></i>
+                  </div>
+                  <p>Members</p>
+               </div>
+               <div class="tab">
+                  <div class="icon">
+                     <i class="fa-solid fa-user-tag" style="color: #ffffff"></i>
+                  </div>
+                  <p>Tags Assignment</p>
+               </div>
+               <div class="tab">
+                  <div class="icon">
+                     <i
+                        class="fa-solid fa-box-archive"
+                        style="color: #ffffff"
+                     ></i>
+                  </div>
+                  <p>Library</p>
+               </div>
+               <div class="tab">
+                  <div class="icon">
+                     <i class="fa-solid fa-envelope" style="color: #ffffff"></i>
+                  </div>
+                  <p>Emails</p>
+               </div>
+            </div>
+            <hr />
+            <div class="user-tabs">
+               <div class="tab">
+                  <div class="user-profile tab-status">
+                     <div class="image">
+                        <img src="assets/mrbruh.png" alt="" />
+                     </div>
+                  </div>
+                  <p>Mr Bruh</p>
+               </div>
+               <div class="tab">
+                  <div class="icon tab-status">
+                     <i class="fa-solid fa-bell" style="color: #ffffff"></i>
+                  </div>
+                  <p>Notifications</p>
+               </div>
+            </div>
+            <footer>90 days left<span>select a plan</span></footer>
+         </div>
+         <script>
+            let sidebar = document.getElementById("sidebar");
+            function toggleSidebar() {
+               sidebar.classList.toggle("close");
+            }
+         </script>
+      </main>
+   </body>
+</html>
